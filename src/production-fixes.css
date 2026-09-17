@@ -6,8 +6,8 @@
 .caseVisual img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;opacity:1!important;filter:none!important;display:block!important}
 .caseVisual .caseUI{display:none!important}
 .heroVisual{overflow:hidden!important}
-/* New hero image: modern technology/business team working in a bright office */
-.heroVideo{position:absolute!important;inset:10px 0!important;min-height:0!important;height:100%!important;border-radius:24px;background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=90')!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;overflow:hidden;box-shadow:0 28px 70px rgba(16,39,68,.18)}
+/* Hero image: fresh modern collaboration/technology scene */
+.heroVideo{position:absolute!important;inset:10px 0!important;min-height:0!important;height:100%!important;border-radius:24px;background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1800&q=90')!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;overflow:hidden;box-shadow:0 28px 70px rgba(16,39,68,.18)}
 .heroVideo::before,.heroVideo::after{display:none!important}
 .heroVideo .videoOverlay{display:none!important}
 .heroVisual .dashboard,.heroVisual .floatCard{display:none!important}
@@ -16,5 +16,17 @@
 .visualImage .imageBadge{display:none!important}
 .image-fallback{background:#eaf3ff!important}
 .image-fallback img{display:none!important}
+/* Standalone navigation pages */
+body[data-page="Home"] main>section{display:none!important}
+body[data-page="Home"] main>#home,body[data-page="Home"] main>.logos{display:flex!important}
+body[data-page="Services"] main>section{display:none!important}
+body[data-page="Services"] main>#services,body[data-page="Services"] main>.visualBreak,body[data-page="Services"] main>.process{display:grid!important}
+body[data-page="Work"] main>section{display:none!important}
+body[data-page="Work"] main>#work{display:block!important}
+body[data-page="Insights"] main>section{display:none!important}
+body[data-page="Insights"] main>#insights{display:grid!important}
+body[data-page="Contact"] main>section{display:none!important}
+body[data-page="Contact"] main>#contact{display:flex!important}
+body[data-page="Home"] footer,body[data-page="Services"] footer,body[data-page="Work"] footer,body[data-page="Insights"] footer,body[data-page="Contact"] footer{display:grid!important}
 img{max-width:100%}
 @media(max-width:720px){.heroVideo{inset:5px 0!important;height:100%!important;border-radius:20px}.visualCopy p::before{font-size:14px}}
