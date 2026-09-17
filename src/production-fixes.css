@@ -1,10 +1,11 @@
 /* Production visual/content hardening */
 .visualCopy p{font-size:0!important;line-height:1.7}
 .visualCopy p::before{content:'Clear information architecture, product-style interfaces, purposeful motion and business-focused visuals are common patterns across modern B2B SaaS and automation sites.';font-size:15px;color:#66778c}
-.caseVisual{position:relative;overflow:hidden}
+.caseVisual{position:relative;overflow:hidden;background:linear-gradient(135deg,#eaf3ff,#dbe9f8)}
 .caseVisual img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;opacity:.22!important}
+.caseVisual img[style*="hidden"]{display:none!important}
 .caseVisual .caseUI{position:relative!important;z-index:2!important}
-.heroVideo{position:absolute!important;inset:10px 0!important;min-height:0!important;height:auto!important;border-radius:24px;background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=88')!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;overflow:hidden;box-shadow:0 28px 70px rgba(16,39,68,.18)}
+.heroVideo{position:absolute!important;inset:10px 0!important;min-height:0!important;height:100%!important;border-radius:24px;background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=88')!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;overflow:hidden;box-shadow:0 28px 70px rgba(16,39,68,.18)}
 .heroVideo::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,20,36,.18),rgba(7,49,89,.42))}
 .heroVideo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,20,36,.08),rgba(7,20,36,.46));pointer-events:none}
 .heroVideo .videoOverlay{position:absolute;left:28px;right:28px;bottom:28px;z-index:2;color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.35)}
@@ -13,6 +14,9 @@
 .heroVisual{isolation:isolate}
 .heroVisual .dashboard{z-index:3}
 .heroVisual .floatCard{z-index:4}
-.visualImage img{background:#e8eef5}
+.visualImage{position:relative;overflow:hidden;background:linear-gradient(135deg,#eaf3ff,#dbe9f8)}
+.visualImage img{display:block;width:100%;height:100%;object-fit:cover;background:#e8eef5}
 img{max-width:100%}
-@media(max-width:720px){.heroVideo{inset:5px 0!important;border-radius:20px}.heroVideo .videoOverlay{left:20px;right:20px;bottom:20px}.heroVideo .videoOverlay strong{font-size:19px}.visualCopy p::before{font-size:14px}}
+.image-fallback{background:linear-gradient(135deg,#eaf3ff,#dbe9f8)!important}
+.image-fallback img{display:none!important}
+@media(max-width:720px){.heroVideo{inset:5px 0!important;height:100%!important;border-radius:20px}.heroVideo .videoOverlay{left:20px;right:20px;bottom:20px}.heroVideo .videoOverlay strong{font-size:19px}.visualCopy p::before{font-size:14px}}
