@@ -1,0 +1,11 @@
+/* Production visual/content hardening */
+.visualCopy p{font-size:0!important;line-height:1.7}
+.visualCopy p::before{content:'Clear information architecture, product-style interfaces, purposeful motion and business-focused visuals are common patterns across modern B2B SaaS and automation sites.';font-size:15px;color:#66778c}
+.caseVisual img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;opacity:.22!important}
+.caseVisual .caseUI{position:relative!important;z-index:2!important}
+.heroVideo{min-height:460px;border-radius:22px;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;position:relative;overflow:hidden}
+.heroVideo::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,20,36,.35),rgba(7,49,89,.48));pointer-events:none}
+.videoOverlay{position:relative;z-index:2}
+.visualImage img{background:#e8eef5}
+img{max-width:100%}
+@media(max-width:720px){.heroVideo{min-height:330px}.visualCopy p::before{font-size:14px}}
