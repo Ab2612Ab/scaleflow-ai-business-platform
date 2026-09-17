@@ -40,7 +40,7 @@
       <div class="workGrid" id="workGrid"></div>
       <div class="workBottom">
         <div><span class="label">THE APPROACH</span><h3>Strategy first.<br><em>Interfaces second.</em></h3></div>
-        <p>Good case studies explain the problem, the system and the decisions behind the interface. That story-led structure is a common pattern across contemporary agency work pages. citeturn317142search1turn317142search7</p>
+        <p>Good case studies explain the problem, the system and the decisions behind the interface. The new layout uses that story-led pattern so visitors can browse by capability and open a focused project view.</p>
       </div>
       <div class="workCaseModal" aria-hidden="true"><div class="workCaseBackdrop"></div><div class="workCaseDialog" role="dialog" aria-modal="true"><button class="workCaseClose" aria-label="Close">×</button><div class="workCaseMedia"><img alt=""></div><div class="workCaseBody"></div></div></div>
     `;
