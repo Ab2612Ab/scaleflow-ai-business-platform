@@ -1,0 +1,1 @@
+export default function handler(req,res){res.status(200).json({ok:true,service:'ScaleFlow AI backend',authConfigured:Boolean(process.env.SUPABASE_URL&&process.env.SUPABASE_ANON_KEY),emailConfigured:Boolean(process.env.RESEND_API_KEY&&process.env.CONTACT_TO_EMAIL&&process.env.CONTACT_FROM_EMAIL),timestamp:new Date().toISOString()})}
