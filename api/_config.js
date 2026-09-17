@@ -1,0 +1,6 @@
+export function json(res,status,payload){res.status(status).setHeader('Content-Type','application/json');res.end(JSON.stringify(payload))}
+export function method(req,res,allowed){if(req.method!==allowed){res.setHeader('Allow',allowed);json(res,405,{error:`Method ${req.method} not allowed.`});return false}return true}
+export function config(){return {url:process.env.SUPABASE_URL,key:process.env.SUPABASE_ANON_KEY}}
+export async function supabase(path,{method='GET',body,token}={}){const {url,key}=config();if(!url||!key)throw new Error('Authentication backend is not configured.');const headers={apikey:key,'Content-Type':'application/json',...(token?{Authorization:`Bearer ${token}`}:{})};const r=await fetch(`${url.replace(/\/$/,'')}${path}`,{method,headers,body:body?JSON.stringify(body):undefined});const text=await r.text();let data={};try{data=text?JSON.parse(text):{}}catch{data={message:text}}if(!r.ok)throw new Error(data.msg||data.message||data.error_description||data.error||'Authentication request failed.');return data}
+export function bearer(req){const h=req.headers.authorization||'';return h.startsWith('Bearer ')?h.slice(7):''}
+export function errorMessage(e){return e instanceof Error?e.message:'Unexpected server error.'}
