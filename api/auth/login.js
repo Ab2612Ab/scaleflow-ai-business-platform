@@ -1,0 +1,2 @@
+import {json,method,supabase,errorMessage} from '../_config.js';
+export default async function handler(req,res){if(!method(req,res,'POST'))return;try{const {email,password}=req.body||{};if(!email||!password)return json(res,400,{error:'Email and password are required.'});const d=await supabase('/auth/v1/token?grant_type=password',{method:'POST',body:{email,password}});json(res,200,{session:{access_token:d.access_token,refresh_token:d.refresh_token,user:d.user},user:d.user})}catch(e){json(res,401,{error:errorMessage(e)})}}
